@@ -1,0 +1,50 @@
+{
+  "name": "round-table",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./lib/index.js",
+  "bin": {
+    "round-table-client": "./lib/util/contract_api.js"
+  },
+  "pkg": {
+    "scripts": "lib/**/*.js"
+  },
+  "module": "./lib/index.js",
+  "dependencies": {
+    "@solana/web3.js": "^1.29.1",
+    "borsh": "^0.7.0",
+    "typescript": "^4.1.2"
+  },
+  "scripts": {
+    "start": "npx ts-node ./util/contract_api.ts",
+    "build": "tsc",
+    "postinstall": "tsc",
+    "package": "pkg . --output round-table"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not ie <= 99",
+      "not android <= 4.4.4",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@babel/helper-compilation-targets": "^7.16.7",
+    "@types/bn.js": "^5.1.1",
+    "@types/node": "^18.7.8",
+    "pkg": "^5.8.0"
+  }
+}
